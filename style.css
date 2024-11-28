@@ -12,33 +12,28 @@ header {
     text-align: center;
 }
 
-nav a {
-    color: #ffffff;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-h2 {
-    text-align: center;
-}
-
-.events {
-    max-width: 800px;
-    margin: 20px auto;
+.login-form {
+    max-width: 400px;
+    margin: 50px auto;
     padding: 20px;
     background: #ffffff;
     border-radius: 5px;
     box-shadow: 0 0 10px #cccccc;
 }
 
-.event {
-    text-align: center;
-    margin: 20px 0;
+.login-form div {
+    margin-bottom: 15px;
 }
 
-.event img {
-    max-width: 100%;
-    height: auto;
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
@@ -54,4 +49,10 @@ button {
 
 button:hover {
     background: #454f58;
+}
+
+#loginMessage {
+    text-align: center;
+    margin-top: 15px;
+    color: red; /* Default color for error messages */
 }
