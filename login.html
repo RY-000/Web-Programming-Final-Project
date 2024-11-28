@@ -12,7 +12,7 @@
     </header>
     <main>
         <section class="login-form">
-            <h2>Fill in your credentials</h2>
+            <h2>Welcome Back!</h2>
             <form id="loginForm" onsubmit="return handleLogin(event)">
                 <div>
                     <label for="username">Username:</label>
@@ -25,6 +25,7 @@
                 <button type="submit">Login</button>
             </form>
             <p id="loginMessage"></p>
+            <p>Don't have an account? <a href="register.html">Register here</a>.</p>
         </section>
     </main>
 
@@ -32,20 +33,18 @@
         function handleLogin(event) {
             event.preventDefault(); // Prevent the form from submitting normally
 
-            // Retrieve the user input
+            // Retrieve user input
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
-            // Simple hardcoded credentials for demonstration
-            const validUsername = "user"; // Replace with real credentials
-            const validPassword = "password"; // Replace with real credentials
+            // Retrieve existing users from localStorage
+            const existingUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
 
-            // Check credentials
-            if (username === validUsername && password === validPassword) {
-                document.getElementById('loginMessage').innerText = "Login successful! Redirecting...";
-                setTimeout(() => {
-                    window.location.href = "index.html"; // Redirect to the main page
-                }, 1500);
+            // Check if the user exists and the password matches
+            const user = existingUsers.find(user => user.username === username && user.password === password);
+            if (user) {
+                document.getElementById('loginMessage').innerText = "Login successful! Welcome back!";
+                // Here you could redirect to a dashboard or events page
             } else {
                 document.getElementById('loginMessage').innerText = "Invalid username or password. Please try again.";
             }
