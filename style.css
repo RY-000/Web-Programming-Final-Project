@@ -12,7 +12,7 @@ header {
     text-align: center;
 }
 
-.login-form {
+.registration-form {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
@@ -21,16 +21,16 @@ header {
     box-shadow: 0 0 10px #cccccc;
 }
 
-.login-form div {
+.registration-form div {
     margin-bottom: 15px;
 }
 
-.login-form label {
+.registration-form label {
     display: block;
     margin-bottom: 5px;
 }
 
-.login-form input {
+.registration-form input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -51,7 +51,7 @@ button:hover {
     background: #454f58;
 }
 
-#loginMessage {
+#registrationMessage {
     text-align: center;
     margin-top: 15px;
     color: red; /* Default color for error messages */
