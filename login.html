@@ -43,8 +43,11 @@
             // Check if the user exists and the password matches
             const user = existingUsers.find(user => user.username === username && user.password === password);
             if (user) {
+                // Set a flag in localStorage that the user is logged in
+                localStorage.setItem('isLoggedIn', 'true');
                 document.getElementById('loginMessage').innerText = "Login successful! Welcome back!";
-                // Here you could redirect to a dashboard or events page
+                // Redirect to events page
+                window.location.href = "events.html";
             } else {
                 document.getElementById('loginMessage').innerText = "Invalid username or password. Please try again.";
             }
