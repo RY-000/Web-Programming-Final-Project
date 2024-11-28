@@ -22,8 +22,8 @@ h2 {
     text-align: center;
 }
 
-form {
-    max-width: 300px;
+.events {
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     background: #ffffff;
@@ -31,16 +31,14 @@ form {
     box-shadow: 0 0 10px #cccccc;
 }
 
-label {
-    display: block;
-    margin: 10px 0 5px;
+.event {
+    text-align: center;
+    margin: 20px 0;
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #cccccc;
+.event img {
+    max-width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 
