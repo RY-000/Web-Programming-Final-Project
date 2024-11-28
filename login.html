@@ -10,14 +10,46 @@
     <header>
         <h1>Login</h1>
     </header>
-    <form id="loginForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" required>
-        <label for="password">Password:</label>
-        <input type="password" id="password" required>
-        <button type="submit">Login</button>
-        <p>Don't have an account? <a href="register.html">Register here</a></p>
-    </form>
-    <script src="script.js"></script>
+    <main>
+        <section class="login-form">
+            <h2>Fill in your credentials</h2>
+            <form id="loginForm" onsubmit="return handleLogin(event)">
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p id="loginMessage"></p>
+        </section>
+    </main>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Retrieve the user input
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simple hardcoded credentials for demonstration
+            const validUsername = "user"; // Replace with real credentials
+            const validPassword = "password"; // Replace with real credentials
+
+            // Check credentials
+            if (username === validUsername && password === validPassword) {
+                document.getElementById('loginMessage').innerText = "Login successful! Redirecting...";
+                setTimeout(() => {
+                    window.location.href = "index.html"; // Redirect to the main page
+                }, 1500);
+            } else {
+                document.getElementById('loginMessage').innerText = "Invalid username or password. Please try again.";
+            }
+        }
+    </script>
 </body>
 </html>
