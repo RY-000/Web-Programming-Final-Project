@@ -3,35 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Event Booking</title>
+    <title>Charity Event Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Event Booking System</h1>
-        <nav>
-            <a href="login.html">Login</a>
-            <a href="register.html">Register</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Welcome to the Event Booking System!</h2>
-        <p>Book your favorite events with ease.</p>
-        
-       <section class="events">
-    <h3>Upcoming Events</h3>
-    
-    <div class="event">
-        <img src="https://www.signupgenius.com/cms/socialMediaImages/beach-clean-up-tips-ideas-facebook-1200x630.png" alt="Beach Cleanup" />
-        <h4>Beach Cleanup</h4>
-        <p>Join us for a community beach cleanup! Help keep our beaches clean and enjoy a day in the sun.</p>
-        <button onclick="alert('Beach Cleanup event booked!')">Book Now!</button>
-    </div>
-    
-    <div class="event">
-        <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_800,q_75,w_1200/v1/clients/durangoco/MANNA18_17_16_36_eff1ab49-871a-4de2-ab66-dd5772ea0b19.jpg" alt="Soup Kitchen" />
-        <h4>Soup Kitchen Event</h4>
-        <p>Join us to volunteer at the local soup kitchen and help serve meals to those in need.</p>
-        <button onclick="alert('Soup Kitchen event booked!')">Book Now!</button>
-    </div>
-</section>
+    <h1>Welcome to the Charity Event</h1>
+    <div id="user-info"></div>
+    <button onclick="logout()">Logout</button>
+    <script src="script.js"></script>
+</body>
+</html>
