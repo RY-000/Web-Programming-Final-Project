@@ -3,36 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Activity Sign Up</title>
+    <title>Welcome to Connect.com</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Charity Activity Sign-Up</h1>
-        <form id="signup-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone">
-
-            <label for="activity">Choose an Activity:</label>
-            <select id="activity" name="activity" required>
-                <option value="volunteering">Volunteering</option>
-                <option value="fundraising">Fundraising</option>
-                <option value="awareness">Awareness Campaign</option>
-            </select>
-
-            <button type="submit">Sign Up</button>
-        </form>
-        <div id="confirmation" class="hidden">
-            <p>Thank you for signing up!</p>
+        <h1>Welcome to Connect.com</h1>
+        <div class="button-container">
+            <button onclick="window.location.href='signup.html'">Sign Up</button>
+            <button onclick="window.location.href='signin.html'">Sign In</button>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
