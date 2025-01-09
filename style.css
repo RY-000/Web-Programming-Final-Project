@@ -1,6 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    background: url('your_background_image_url') no-repeat center center fixed; /* Add background image URL */
+    background-size: cover;
     margin: 0;
     padding: 20px;
 }
@@ -8,7 +9,7 @@ body {
 .container {
     max-width: 600px;
     margin: auto;
-    background: white;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for better readability */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -16,11 +17,26 @@ body {
 
 h1 {
     text-align: center;
+    color: #333;
 }
 
-label {
-    display: block;
-    margin: 10px 0 5px;
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    width: 45%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 input, select {
@@ -31,20 +47,20 @@ input, select {
     border-radius: 4px;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.activity-item {
+    border: 1px solid #ddd;
+    padding: 15px;
     border-radius: 4px;
-    cursor: pointer;
+    text-align: center;
+    background: #f9f9f9;
 }
 
-button:hover {
-    background-color: #218838;
-}
-
-.hidden {
-    display: none;
+.activity-item h2 {
+    margin: 0 0 10px;
 }
